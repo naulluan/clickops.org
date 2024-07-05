@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevSecOps as a Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="home">
+        <h1>Welcome to DevSecOps as a Service</h1>
+        <p>Empowering your development pipeline with security and automation.</p>
+    </section>
+    <section id="features">
+        <h2>Features</h2>
+        <div class="features-container">
+            <div class="feature">
+                <h3><i class="fas fa-code-branch"></i> Continuous Integration & Delivery</h3>
+                <p>Streamline your CI/CD pipeline with automated testing, integration, and deployment, ensuring faster and more reliable software releases.</p>
+            </div>
+            <div class="feature">
+                <h3><i class="fas fa-shield-alt"></i> Security Integration</h3>
+                <p>Embed security at every stage of your development lifecycle, from code analysis to runtime protection, minimizing vulnerabilities and enhancing compliance.</p>
+            </div>
+            <div class="feature">
+                <h3><i class="fas fa-arrows-alt"></i> Scalability</h3>
+                <p>Ensure your applications can handle increased loads seamlessly with our scalable infrastructure solutions, enabling growth without compromising performance.</p>
+            </div>
+            <div class="feature">
+                <h3><i class="fas fa-sync-alt"></i> Automated Monitoring</h3>
+                <p>Utilize advanced monitoring tools to automatically detect and respond to issues in real-time, ensuring optimal performance and minimal downtime.</p>
+            </div>
+        </div>
+    </section>
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-container">
+            <div class="pricing-option">
+                <h3>Basic</h3>
+                <p>$99/month</p>
+                <p>Essential features to get you started, including CI/CD, basic security integration, and monitoring.</p>
+                <button>Get started</button>
+            </div>
+            <div class="pricing-option">
+                <h3>Pro</h3>
+                <p>$199/month</p>
+                <p>Advanced features for growing businesses, including enhanced security, scalability, and priority support.</p>
+                <button>Chat with sales</button>
+            </div>
+            <div class="pricing-option">
+                <h3>Enterprise</h3>
+                <p>Contact us</p>
+                <p>Customized solutions for large enterprises, with full security integration, scalability, and dedicated support.</p>
+                <button>Contact us</button>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 DevSecOps as a Service. All rights reserved.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("nav a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function(){
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+    </script>
+</body>
+</html>
