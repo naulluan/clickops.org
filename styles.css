@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #f4f4f4, #e2e2e2);
     color: #333;
     line-height: 1.6;
 }
@@ -46,7 +46,6 @@ section {
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: justify;
 }
 
 section#home {
@@ -56,10 +55,17 @@ section#home {
     padding: 100px 20px;
 }
 
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
 .features-container, .pricing-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .feature, .pricing-option {
@@ -69,22 +75,45 @@ section#home {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     flex: 1;
-    text-align: center;
     max-width: 30%;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover, .pricing-option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(66, 165, 245, 0.6);
 }
 
 .feature h3, .pricing-option h3 {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 10px;
 }
 
 .feature h3 i, .pricing-option h3 i,
 .feature h3 span.material-icons, .pricing-option h3 span.material-icons {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: #42a5f5;
+}
+
+.feature ul, .pricing-option ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature ul li, .pricing-option ul li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.feature ul li i, .pricing-option ul li i {
+    margin-right: 10px;
     color: #42a5f5;
 }
 
@@ -141,6 +170,51 @@ footer {
 /* Additional styles for icons */
 .feature h3 i, .pricing-option h3 i,
 .feature h3 span.material-icons, .pricing-option h3 span.material-icons {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #42a5f5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .features-container, .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature, .pricing-option {
+        max-width: 90%;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
 }
